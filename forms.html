@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Best-wallpaper-hd-nature-download.jpg");
+      }
+      .container h1 {
+        text-align: center;
+      }
+      .container {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        max-width: 300px;
+        padding: 16px;
+        max-height: 300px;
+        background: #a1875770;
+        border-radius: 10px;
+        box-shadow:5px 5px 5px 5px;
+      }
+      /* Full-width input fields */
+      input[type="text"],
+      input[type="password"] {
+        width: 92%;
+        padding: 10px 10px 10px;
+        margin: 15px 6px 16px;
+        border: none;
+        background: #180817;
+        text-align: center;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      /* Set a style for the submit button */
+      .btn {
+        background-color: #04aa6dc7;
+        color: rgb(32, 16, 16);
+        padding: 16px 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form class="container">
+        <h1>Login</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+    <script>
+      var form = document.getElementById("container");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var useremail = document.getElementById("useremail").value;
+        console.log(useremail);
+        var userpassword = document.getElementById("userpassword").value;
+        console.log(userpassword);
+      });
+    </script>
+  </body>
+</html>
