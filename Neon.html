@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .neon {
+        color: #f5f0f0;
+        text-shadow: 0 0 7px #84b1b1, 0 0 10px rgb(238, 243, 243),
+          0 0 21px #f3e3e3, 0 0 42px rgb(52, 121, 121), 0 0 82px rgb(83, 9, 50),
+          0 0 92px rgb(220, 240, 216), 0 0 102px rgb(192, 194, 216),
+          0 0 15px rgb(221, 221, 230);
+      }
+      body {
+        font-size: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000000;
+        display: grid;
+        place-items: center;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      h1 {
+        font-size: 5.2rem;
+      }
+      h2 {
+        color: #fff;
+        text-shadow: 0 0 7px #fff, 0 0 10px #e9d9d9, 0 0 21px #fff,
+          0 0 42px #0ff, 0 0 82px #0ff, 0 0 92px #0ff, 0 0 102px #23ff,
+          0 0 15px rgb(64, 209, 209);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+      }
+      .container {
+        margin-top: 20vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="neon">Priya Singh</h1>
+      <h2 class="typewriter"></h2>
+    </div>
+  </body>
+  <script>
+    let title = document.querySelector(".typewriter");
+    let name = "I am learning a javascript!";
+    let index = 1;
+    const type_writer = () => {
+      let new_title = name.slice(0, index);
+      title.innerHTML = new_title;
+      index > name.length ? (index = 1) : index++;
+      setTimeout(() => type_writer(), 100);
+    };
+
+    type_writer();
+  </script>
+</html>
