@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pyramid {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.pyramid-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.pyramid-div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   /* background: linear-gradient(rgb(10, 1, 22), rgb(232, 248, 6));  */
+
+  background:  linear-gradient(to right top, #e99700, #d1a100, #b6a900, #99b000, #77b500, #71bc00, #69c200, #5fc900, #7ed400, #9bde00, #b7e800, #d3f200);;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(150px) rotateX(30deg);
+  transform-origin: bottom;
+}
+.bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ece80a;
+  transform: rotateX(90deg) translateZ(-250px);
+  filter: blur(20px);
+  box-shadow: 0 0 120px rgba(218, 214, 8, 0.2), 0 0 200px rgba(218, 214, 8, 0.4),
+    0 0 300px rgba(218, 214, 8, 0.6), 0 0 400px rgba(218, 214, 8, 0.8),
+    0 0 500px rgba(218, 214, 8, 1);
+}
